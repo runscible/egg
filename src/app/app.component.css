@@ -1,0 +1,53 @@
+.container{
+	color:black;
+	background-color: #b4afce; 
+	height:80px;
+	text-align: center;
+	border-style: solid; 
+	border-radius: 5px; 
+	border-color: black;
+	margin-left:10px;  
+}
+.but_nav{
+	float: left;
+	position: relative;
+	margin-top: 20px;
+	border-style: solid; 
+	border-color:black;
+	border-radius: 4px;
+	margin-left: 5px;
+}
+.left-layout{
+	position: relative;
+	float: right;
+	padding: auto;
+}
+.filter-button{
+	float: left;
+	position: relative;
+	margin-top: 10px;
+	background-color: #b4afce; 
+	border-style: solid; 
+}
+.div-projects{
+	float: left;
+	position: relative;
+	border-radius: 10px; 
+	border-style: solid;
+	background-color: #b4afce; 
+	height: 450px; 
+	width: 16%;
+	margin: 5px;
+	text-align: center;  
+}
+.div-taskbar{
+	position: relative;
+	float: left;
+	height: 450px;
+	width: 77%; 
+	border-radius: 5px; 
+	border-color: black; 
+	border-style: solid;
+	text-align: center;
+	margin: -1px;
+}

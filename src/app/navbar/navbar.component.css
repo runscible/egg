@@ -1,0 +1,8 @@
+.but_nav{
+	height: 50px;
+	width: 95px;  
+	border: solid; 
+	border-color: #387eed; 
+	border-radius: 4px;
+	margin: 3px;  
+}
