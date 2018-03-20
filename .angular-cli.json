@@ -20,7 +20,7 @@
       "prefix": "app",
       "styles": [
         "styles.css"
-      ],
+        ],
       "scripts": [],
       "environmentSource": "environments/environment.ts",
       "environments": {
@@ -55,6 +55,9 @@
   },
   "defaults": {
     "styleExt": "css",
-    "component": {}
+    "component": {}, 
+    "build": {
+      "showCircularDependencies": false
+    }
   }
 }

@@ -1,0 +1,20 @@
+<div class="edit-project" *ngIf="project">
+	<h2><pre>edit project</pre></h2>	
+	<pre><h2>{{project.name}}</h2></pre>
+	<div>id: <span>{{project.id}}</span></div>
+	<div>
+		<mat-form-field>
+			<input matInput [(ngModel)]="project.name" placeholder="project name">
+		</mat-form-field>
+		<mat-form-field>
+			<input matInput [(ngModel)]="project.content" placeholder="project content">
+		</mat-form-field>
+		<br>
+		<mat-form-field style="padding: 5px;">
+			<textarea class="update-notes" matInput [(ngModel)]="project.note" placeholder="project note">
+			</textarea>	
+		</mat-form-field>
+	</div>
+	<button class="update-button" mat-button (click)="goBack()">go back</button>
+	<button class="update-button" mat-button (click)="save()">save</button>
+</div>

@@ -1,0 +1,17 @@
+<div class="detail-project" *ngIf="project">
+	<h2><pre>detail of project</pre></h2>
+	<div class="detail-grafic">
+		
+	</div>
+	<div style="height: 100px;">
+		<pre>name</pre>
+		<pre><h2>{{project.name}}</h2></pre>
+		<strong>content: </strong>
+		<p>{{project.content}}</p>
+		<strong>notes</strong>
+		<p class="detail-notes">{{project.note}}</p>
+	</div>
+	<div style="position: absolute;bottom: 0; margin-bottom:  5px;margin-left: -5px;">
+		<button class="detail-button" mat-button (click)="goBack()">go back</button>
+	</div>
+</div>

@@ -1,6 +1,42 @@
 .add-project{
 	position: absolute;
 	margin-left: 60px;
-	margin-bottom: 6px;  
+	margin-bottom: 6px;
+	margin-top: 20px;   
 	bottom: 0; 
+}
+.project-card{
+	position: fixed;
+	background-color: #dad5f2; 
+	margin: 50px;
+	padding: 0px;
+	font-family: cambria;
+	text-align: center;  
+	align-content: center;
+	height: auto;
+	margin-top: auto;
+	margin-bottom: auto;  
+}
+.div-title{
+	background-color: #615596; 
+	height: 40px; 
+	width: 100%;
+	padding-top: 20px; 
+}
+.div-content{
+	word-break: break-all;
+	white-space: normal;
+	text-align: center;
+}
+
+.detail-project{
+	margin-left:3500px;  
+	height: 200px; 
+	width: 200px; 
+	background-color: #dad5f2;
+	position: sticky;
+	float: right;
+}
+.new-note{
+	height: 60px; 
 }

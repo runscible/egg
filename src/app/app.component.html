@@ -1,17 +1,18 @@
+
 <div class="container">
-	<button class="but_nav" mat-button color="primary">Proyect</button>
-	<button class="but_nav" mat-button color="primary">Groups</button>
-	<button class="but_nav" mat-button color="primary">Activities</button>
-	<button class="but_nav" mat-button color="primary">Schedule</button>
-	<button class="but_nav" mat-button color="primary">TimeKeeping</button>
-	<button class="but_nav" mat-button color="primary">Flow</button>
-	<button class="but_nav" mat-button color="primary">Reporting</button>
+	<button class="but_nav" (click)="home()" mat-raised-button color="primary">Proyect</button>
+	<button  class="but_nav" (click)="underConstruction()" mat-raised-button color="primary">Groups</button>
+	<button  class="but_nav" (click)="underConstruction()" mat-raised-button color="primary">Activities</button>
+	<button  class="but_nav" (click)="underConstruction()" mat-raised-button color="primary">Schedule</button>
+	<button  class="but_nav" (click)="underConstruction()" mat-raised-button color="primary">TimeKeeping</button>
+	<button  class="but_nav" (click)="underConstruction()" mat-raised-button color="primary">Flow</button>
+	<button  class="but_nav" (click)="underConstruction()" mat-raised-button color="primary">Reporting</button>
 	<div class="left-layout"> 
 		<mat-icon style="position: relative;float: right;margin: 25px;">person</mat-icon>
 		<div style="position: relative; float: right;right;margin: 25px;">
-		welcome user
-		<br>
-		admin
+			welcome user
+			<br>
+			admin
 		</div>
 	</div>
 </div>
@@ -21,7 +22,4 @@
 <div class="div-projects">
 	<app-projects></app-projects>
 </div>
-<div class="div-taskbar">
-	<app-taskbar></app-taskbar>
-</div>	
 <router-outlet></router-outlet>

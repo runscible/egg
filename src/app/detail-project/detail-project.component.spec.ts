@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { TaskbarComponent } from './taskbar.component';
+import { DetailProjectComponent } from './detail-project.component';
 
-describe('TaskbarComponent', () => {
-  let component: TaskbarComponent;
-  let fixture: ComponentFixture<TaskbarComponent>;
+describe('DetailProjectComponent', () => {
+  let component: DetailProjectComponent;
+  let fixture: ComponentFixture<DetailProjectComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ TaskbarComponent ]
+      declarations: [ DetailProjectComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(TaskbarComponent);
+    fixture = TestBed.createComponent(DetailProjectComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

@@ -1,9 +1,87 @@
-<p>
-  acá van a ir las tareas
-  <br>
-  (en forma de tarjetas)
-  <br>
-  <button class="add-project"  mat-mini-fab>
-  	<mat-icon>add</mat-icon>
-  </button>
-</p>
+  <div class="div-title">projects</div>
+  <mat-form-field>
+      <input #search matInput  placeholder="search" >
+      <button mat-icon-button style="position: relative; float: right;"> 
+        <mat-icon>filter_list</mat-icon>
+      </button>  
+      <button (click)="searchProject(search.value)" mat-icon-button style="position: relative; float: right;">
+        <mat-icon>search</mat-icon>
+      </button>
+  </mat-form-field>  
+ <mat-accordion *ngIf="async_list">
+  <!--segmento que se ejecuta si la lista es asincrona-->
+    <pre>lista asincrona</pre>
+    <mat-expansion-panel  *ngFor="let project of projects | async">
+          <mat-expansion-panel-header>
+            <mat-panel-title >
+               <div class="div-content"> 
+               {{project.name}}
+               </div> 
+            </mat-panel-title>
+          </mat-expansion-panel-header> 
+            <mat-panel-description >
+              <div class="div-content">
+              {{project.content}}
+              </div>
+            <div style="position: relative;float: right;margin-left: auto;">  
+              <button  (click)="projectDetail()" mat-icon-button> 
+                <mat-icon id = {{project.id}}>timeline</mat-icon>
+              </button>
+              <button  (click)="projectEdit()" mat-icon-button> 
+                <mat-icon id={{project.id}}>mode_edit</mat-icon>
+              </button>
+            </div>
+            </mat-panel-description>  
+        </mat-expansion-panel>
+  </mat-accordion>      
+  <!--segmento que se ejecuta si la lista es asincrona-->
+  <!--segmento que se ejecuta si la lista no es asincrona-->      
+    <mat-accordion *ngIf="!async_list">
+      <pre>lista normal</pre>
+        <mat-expansion-panel  *ngFor="let project of _projects">
+            <mat-expansion-panel-header>
+              <mat-panel-title >
+                 <div class="div-content"> 
+                {{project.name}}
+                 </div> 
+              </mat-panel-title>
+            </mat-expansion-panel-header> 
+              <mat-panel-description >
+                <div class="div-content">
+                {{project.content}}
+                </div>
+              <div style="position: relative;float: right;margin-left: auto;">  
+                  <button  (click)="projectDetail()" mat-icon-button> 
+                    <mat-icon id = {{project.id}}>timeline</mat-icon>
+                  </button>
+                  <button  (click)="projectEdit()" mat-icon-button> 
+                    <mat-icon id={{project.id}}>mode_edit</mat-icon>
+                  </button>
+              </div>
+              </mat-panel-description>  
+          </mat-expansion-panel>
+  <!--segmento que se ejecuta si la lista no es asincrona-->
+</mat-accordion>
+
+<div *ngIf="app" style="padding: 10px;">
+    <div >new project</div>
+      <mat-form-field style="margin-right: 35px;" >
+        <input #name matInput placeholder="new name" >
+      </mat-form-field>
+      <mat-form-field style="margin-right:40px;">
+        <input #content matInput placeholder="new content">
+      </mat-form-field>
+      <mat-form-field>
+        <textarea class="new-note" #note matInput placeholder="notes"></textarea>
+      </mat-form-field>
+    <button mat-icon-button style="position: relative;float: right;" (click)="add(name.value, content.value, note.value)">
+      <mat-icon >check</mat-icon>
+    </button>
+</div>
+<!--no me enorgullece hacer esto , estoy apurado-->
+    <br><br><br>
+    <button class="add-project" (click)="openDialog()" mat-mini-fab>
+    	<mat-icon>add</mat-icon>
+    </button>
+  <br>  
+
